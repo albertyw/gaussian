@@ -3,6 +3,8 @@
 [![Build Status](https://drone.albertyw.com/api/badges/albertyw/go-gaussian-elimination/status.svg)](https://drone.albertyw.com/albertyw/go-gaussian-elimination)
 [![Go Reference](https://pkg.go.dev/badge/github.com/albertyw/reaction-pics.svg)](https://pkg.go.dev/github.com/albertyw/reaction-pics)
 [![Go Report Card](https://goreportcard.com/badge/github.com/albertyw/go-gaussian-elimination)](https://goreportcard.com/report/github.com/albertyw/go-gaussian-elimination)
+[![Maintainability](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination/maintainability.svg)](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination)
+[![Code Coverage](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination/coverage.svg)](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination)
 
 Solve linear equations using Gaussian Elimination.
 
