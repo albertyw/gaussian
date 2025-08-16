@@ -5,6 +5,10 @@ import (
 	"math"
 )
 
+var (
+	ErrSingularMatrix = errors.New("singular matrix")
+)
+
 // Solve solves the linear system Ax = b using Gaussian elimination.
 // A is an n x n matrix, b is a vector of length n.
 // It returns the solution vector x or an error if the matrix is singular.
@@ -28,7 +32,7 @@ func Solve(A [][]float64, b []float64) ([]float64, error) {
 			}
 		}
 		if math.Abs(aug[maxRow][i]) < 1e-12 {
-			return nil, errors.New("singular matrix")
+			return nil, ErrSingularMatrix
 		}
 		aug[i], aug[maxRow] = aug[maxRow], aug[i]
 
