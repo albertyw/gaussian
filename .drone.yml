@@ -16,7 +16,7 @@ steps:
       - make cpuprof
       - make memprof
     environment:
-      QLTY_COVERAE_TOKEN: qltcp_7zcAFXn6fkui7G14
+      QLTY_COVERAGE_TOKEN: qltcp_7zcAFXn6fkui7G14
 
   - name: Test Makefile
     image: cytopia/checkmake:latest
