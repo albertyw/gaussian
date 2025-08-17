@@ -28,3 +28,7 @@ unit:
 cover: test
 	go tool cover -func=c.out
 	sed -i 's/github.com\/albertyw\/go-gaussian-elimination\///g' c.out
+
+.PHONY:example
+example:
+	go run ./example/example.go
