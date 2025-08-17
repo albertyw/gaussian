@@ -7,6 +7,53 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestSolveInputValidation(t *testing.T) {
+	var testCases = []struct {
+		name string
+		a    [][]float64
+		b    []float64
+		err  error
+	}{
+		{
+			name: "NilMatrix",
+			a:    nil,
+			b:    nil,
+			err:  ErrEmptyInput,
+		},
+		{
+			name: "NonSquareMatrix",
+			a:    [][]float64{{1, 2}, {3, 4}, {5, 6}},
+			b:    []float64{7, 8, 9},
+			err:  ErrRectangularMatrix,
+		},
+		{
+			name: "InconsistentDimensions",
+			a:    [][]float64{{1, 2}},
+			b:    []float64{3, 4},
+			err:  ErrInconsistentDimensions,
+		},
+		{
+			name: "EmptyRHS",
+			a:    [][]float64{{1}},
+			b:    []float64{},
+			err:  ErrEmptyInput,
+		},
+		{
+			name: "EmptyMatrixWithNonEmptyRHS",
+			a:    [][]float64{},
+			b:    []float64{1},
+			err:  ErrInconsistentDimensions,
+		},
+	}
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			_, err := Solve(tc.a, tc.b)
+
+			assert.Equal(t, err, tc.err)
+		})
+	}
+}
+
 func TestSolve(t *testing.T) {
 	var testCases = []struct {
 		name     string

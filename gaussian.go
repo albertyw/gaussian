@@ -6,14 +6,32 @@ import (
 )
 
 var (
-	ErrSingularMatrix = errors.New("singular matrix")
+	ErrSingularMatrix         = errors.New("singular matrix")
+	ErrEmptyInput             = errors.New("input cannot be empty")
+	ErrRectangularMatrix      = errors.New("matrix must be square")
+	ErrInconsistentDimensions = errors.New("matrix and vector sizes do not match")
 )
 
 // Solve solves the linear system Ax = b using Gaussian elimination.
-// A is an n x n matrix, b is a vector of length n.
-// It returns the solution vector x or an error if the matrix is singular.
-func Solve(A [][]float64, b []float64) ([]float64, error) {
+// A is a square n x n matrix, b is a vector of length n.
+// It returns the solution vector x or an error if the matrix is singular
+// or if the input dimensions are inconsistent.
+func Solve(A [][]float64, b []float64) (x []float64, err error) {
 	n := len(b)
+
+	// Input validation
+	if n == 0 {
+		return nil, ErrEmptyInput
+	}
+	if len(A) != n {
+		return nil, ErrInconsistentDimensions
+	}
+	for _, row := range A {
+		if len(row) != n {
+			return nil, ErrRectangularMatrix
+		}
+	}
+
 	// Build augmented matrix
 	aug := make([][]float64, n)
 	for i := 0; i < n; i++ {
@@ -52,7 +70,7 @@ func Solve(A [][]float64, b []float64) ([]float64, error) {
 	}
 
 	// Back substitution
-	x := make([]float64, n)
+	x = make([]float64, n)
 	for i := n - 1; i >= 0; i-- {
 		x[i] = aug[i][n]
 		for j := i + 1; j < n; j++ {
