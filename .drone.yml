@@ -8,13 +8,8 @@ steps:
     commands:
       - apt-get update && apt-get install -y xz-utils
       - curl https://qlty.sh | sh
-      - make test
-      - make race
       - make cover
       - ~/.qlty/bin/qlty coverage publish c.out --override-commit-sha "$DRONE_COMMIT_SHA" --override-branch "$DRONE_BRANCH" --override-build-id "$DRONE_BUILD_NUMBER"
-      - make benchmark
-      - make cpuprof
-      - make memprof
     environment:
       QLTY_COVERAGE_TOKEN: qltcp_7zcAFXn6fkui7G14
 

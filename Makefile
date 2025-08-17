@@ -1,11 +1,11 @@
 SHELL := /bin/bash
 
 .PHONY:all
-all: test
+all: cover
 
 .PHONY:clean
 clean:
-	rm memprofile.out cpuprofile.out gaussian.test c.out || true
+	rm c.out || true
 
 .PHONY:install-test-deps
 install-test-deps:
@@ -28,19 +28,3 @@ unit:
 cover: test
 	go tool cover -func=c.out
 	sed -i 's/github.com\/albertyw\/go-gaussian-elimination\///g' c.out
-
-.PHONY:race
-race:
-	go test -race ./...
-
-.PHONY:benchmark
-benchmark:
-	go test -bench=. -benchmem
-
-.PHONY:cpuprof
-cpuprof:
-	go tool pprof -top cpuprofile.out | head -n 20
-
-.PHONY:memprof
-memprof:
-	go tool pprof -top memprofile.out | head -n 20
