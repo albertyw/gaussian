@@ -1,4 +1,4 @@
-module github.com/albertyw/go-gaussian-elimination
+module github.com/albertyw/gaussian
 
 go 1.25.0
 

@@ -1,10 +1,10 @@
 # Gaussian Elimination in Go
 
-[![Build Status](https://drone.albertyw.com/api/badges/albertyw/go-gaussian-elimination/status.svg)](https://drone.albertyw.com/albertyw/go-gaussian-elimination)
-[![Go Reference](https://pkg.go.dev/badge/github.com/albertyw/go-gaussian-elimination.svg)](https://pkg.go.dev/github.com/albertyw/go-gaussian-elimination)
-[![Go Report Card](https://goreportcard.com/badge/github.com/albertyw/go-gaussian-elimination)](https://goreportcard.com/report/github.com/albertyw/go-gaussian-elimination)
-[![Maintainability](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination/maintainability.svg)](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination)
-[![Code Coverage](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination/coverage.svg)](https://qlty.sh/gh/albertyw/projects/go-gaussian-elimination)
+[![Build Status](https://drone.albertyw.com/api/badges/albertyw/gaussian/status.svg)](https://drone.albertyw.com/albertyw/gaussian)
+[![Go Reference](https://pkg.go.dev/badge/github.com/albertyw/gaussian.svg)](https://pkg.go.dev/github.com/albertyw/gaussian)
+[![Go Report Card](https://goreportcard.com/badge/github.com/albertyw/gaussian)](https://goreportcard.com/report/github.com/albertyw/gaussian)
+[![Maintainability](https://qlty.sh/gh/albertyw/projects/gaussian/maintainability.svg)](https://qlty.sh/gh/albertyw/projects/gaussian)
+[![Code Coverage](https://qlty.sh/gh/albertyw/projects/gaussian/coverage.svg)](https://qlty.sh/gh/albertyw/projects/gaussian)
 
 Solve linear equations using Gaussian Elimination.
 
@@ -40,7 +40,7 @@ Solving the linear equations would be done with:
 import (
     "fmt"
 
-    gaussian "github.com/albertyw/go-gaussian-elimination"
+    "github.com/albertyw/gaussian"
 )
 
 func main() {

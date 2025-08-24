@@ -27,7 +27,7 @@ unit:
 .PHONY:cover
 cover: test
 	go tool cover -func=c.out
-	sed -i 's/github.com\/albertyw\/go-gaussian-elimination\///g' c.out
+	sed -i 's/github.com\/albertyw\/gaussian\///g' c.out
 	# Ignore example directory
 	sed -i '/example\//d' c.out
 

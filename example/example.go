@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	gaussian "github.com/albertyw/go-gaussian-elimination"
+	"github.com/albertyw/gaussian"
 )
 
 func main() {
