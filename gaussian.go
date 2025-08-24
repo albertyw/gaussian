@@ -1,4 +1,4 @@
-package goarima
+package gaussian
 
 import (
 	"errors"
