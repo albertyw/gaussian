@@ -2,7 +2,6 @@
 
 [![Build Status](https://drone.albertyw.com/api/badges/albertyw/gaussian/status.svg)](https://drone.albertyw.com/albertyw/gaussian)
 [![Go Reference](https://pkg.go.dev/badge/github.com/albertyw/gaussian.svg)](https://pkg.go.dev/github.com/albertyw/gaussian)
-[![Go Report Card](https://goreportcard.com/badge/github.com/albertyw/gaussian)](https://goreportcard.com/report/github.com/albertyw/gaussian)
 [![Maintainability](https://qlty.sh/gh/albertyw/projects/gaussian/maintainability.svg)](https://qlty.sh/gh/albertyw/projects/gaussian)
 [![Code Coverage](https://qlty.sh/gh/albertyw/projects/gaussian/coverage.svg)](https://qlty.sh/gh/albertyw/projects/gaussian)
 
